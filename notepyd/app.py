@@ -5,8 +5,6 @@ from widgets.navbar import Navbar
 from widgets.infobar import InfoBar
 from config import START_GEOMETRY
 
-from pathlib import Path
-
 class Notepyd(tk.Tk):
     """
     creates the gui program
@@ -48,3 +46,7 @@ class Notepyd(tk.Tk):
         except tk.TclError:
             pass
 
+
+if __name__ == "__main__":
+    notepyd = Notepyd()
+    notepyd.mainloop()
