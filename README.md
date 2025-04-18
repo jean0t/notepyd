@@ -20,7 +20,7 @@ notepyd/
 └── widgets/
     ├── navbar.py      # `Navbar` class (tk.Menu subclass) for file/about menus
     ├── editor.py      # `Editor` class (tk.Frame subclass) with Text + scrollbar
-    └── info_bar.py    # `InfoBar` class (tk.Frame subclass) for live stats
+    └── infobar.py    # `InfoBar` class (tk.Frame subclass) for live stats
 ```
 
 Each UI component is encapsulated in its own class (`tk.Menu`, `tk.Frame`, etc.), promoting **clean code**, **easy maintenance**, and **extensibility**.
