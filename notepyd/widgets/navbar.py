@@ -17,6 +17,7 @@ class Navbar(tk.Menu):
         self.add_cascade(label='File', menu=file_menu)
 
         about_menu = tk.Menu(self, tearoff=0)
+        about_menu.add_command(label='Shortcuts', command=self.show_shortcuts)
         about_menu.add_command(label='About', command=self.show_about)
         self.add_cascade(label='About', menu=about_menu)
 
@@ -44,6 +45,9 @@ class Navbar(tk.Menu):
             with open(path, 'w', encoding='utf-8') as file:
                 file.write(self.app.editor.get_text())
             self.app.set_current_file(path)
+
+    def show_shortcuts(self):
+        messagebox.showinfo('Shortcuts', 'Ctrl-S\tSaves File\nCtrl-O\tOpen a file\nCtrl-Z\tUndo\nCtrl-Shift-Z\tRedo')
 
     def show_about(self):
         messagebox.showinfo('About', 'Notepyd is a text editor in gui, made with tkinter.\nCreator: jean0t (github.com/jean0t)')

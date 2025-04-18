@@ -12,7 +12,7 @@ class Editor(tk.Frame):
         self.scrollbar = tk.Scrollbar(self)
         self.scrollbar.pack(side='right', fill='y')
 
-        self.text = tk.Text(self, wrap='word', undo=True, yscrollcommand=self.scrollbar.set, **kwargs)
+        self.text = tk.Text(self, wrap='word', undo=True, autoseparators=True, maxundo=-1, yscrollcommand=self.scrollbar.set, **kwargs)
         self.text.pack(expand=True, fill='both')
 
         self.scrollbar.config(command=self.text.yview)
@@ -26,6 +26,7 @@ class Editor(tk.Frame):
             content = self.get_text()
             self.app_context.infobar.update_stats(content)
             self.text.edit_modified(False)
+            self.text.edit_separator()
 
     def get_text(self):
         return self.text.get('1.0', tk.END)
@@ -33,3 +34,4 @@ class Editor(tk.Frame):
     def set_text(self, content):
         self.text.delete('1.0', tk.END)
         self.text.insert('1.0', content)
+        self.text.edit_separator()
