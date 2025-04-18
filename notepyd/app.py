@@ -24,6 +24,8 @@ class Notepyd(tk.Tk):
         self.bind_all('<Control-z>', self._undo)
         self.bind_all('<Control-Shift-Z>', self._redo)
 
+        self.editor.focus()
+
     def set_current_file(self, path):
         self.infobar.update_file_name(path.split("/")[-1])
         self.current_file = path

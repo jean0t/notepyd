@@ -31,6 +31,9 @@ class Editor(tk.Frame):
     def get_text(self):
         return self.text.get('1.0', tk.END)
 
+    def focus(self):
+        self.text.focus_set()
+
     def set_text(self, content):
         self.text.delete('1.0', tk.END)
         self.text.insert('1.0', content)
