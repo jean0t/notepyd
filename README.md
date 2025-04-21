@@ -2,6 +2,13 @@
 
 Notepyd is an amazing notepad application because it focuses on being **simple** and containing only the **essential** features. The executable is extremely **lightweight** at just **12 MB**, making it fast to download and run without unnecessary bloat.
 
+## Images
+
+![notepyd1](https://github.com/user-attachments/assets/148e52b5-abfe-4bd8-8ffa-106f933208be)
+
+![notepyd2](https://github.com/user-attachments/assets/3c05fce4-bac7-460c-a1c6-473261b4294a)
+
+
 ## Features
 
 - **Minimal UI**: Only the core elements you need—menu bar, text area, info bar
